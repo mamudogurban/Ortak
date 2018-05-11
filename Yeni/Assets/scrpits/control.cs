@@ -27,11 +27,11 @@ public class control : MonoBehaviour
 
         if (player.transform.position.x/3> zemin1.transform.position.x)
         {
-            zemin1.transform.position += new Vector3(zemin1.transform.position.x*4.2f ,0);
+            zemin1.transform.position = new Vector3(zemin1.transform.position.x+120 ,0);
         }
         if (player.transform.position.x/3> zemin2.transform.position.x)
         {
-            zemin2.transform.position += new Vector3(zemin2.transform.position.x *4.2f, 0);
+            zemin2.transform.position = new Vector3(zemin2.transform.position.x+120, 0);
         }
     }
 }
