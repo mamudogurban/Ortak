@@ -111,7 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cc2fa4701728142aaf414dc8f1b5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "z\u0131plamaGucu": 0
+  fall: 0
+  jump: 0
 --- !u!135 &135510357964861142
 SphereCollider:
   m_ObjectHideFlags: 1
