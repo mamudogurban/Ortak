@@ -241,6 +241,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54437750657513692, guid: 6035f4e23b0ed1a4789dd6e8bf057d8b, type: 2}
+    - {fileID: 114402696028341598, guid: 6035f4e23b0ed1a4789dd6e8bf057d8b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6035f4e23b0ed1a4789dd6e8bf057d8b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &131452224
@@ -411,7 +412,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 275253061}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 100.9, y: 3.3, z: -13.2}
+  m_LocalPosition: {x: 100.9, y: 3.3, z: -18.5}
   m_LocalScale: {x: 0.55831915, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -456,6 +457,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 10
+  jump1: 3
+  jump2: 1
+  jump3: 0
+  fall1: 1
+  fall2: 3
+  fall3: 0
 --- !u!54 &1438814651
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -551,7 +558,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1817991463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 104, y: 7.4, z: 5.4}
+  m_LocalPosition: {x: 104, y: 7.6, z: 5.4}
   m_LocalScale: {x: 50, y: 14.457509, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

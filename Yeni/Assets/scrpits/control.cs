@@ -6,7 +6,7 @@ public class control : MonoBehaviour
 {
     public GameObject zemin1;
     public GameObject zemin2;
-    float uzunluk = 0;
+    
 
     public GameObject player;
 
@@ -14,7 +14,7 @@ public class control : MonoBehaviour
 
     void Start()
     {
-        uzunluk = zemin1.GetComponent<BoxCollider>().size.x;
+   
 
     }
 
