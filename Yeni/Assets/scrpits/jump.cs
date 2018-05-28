@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jump : MonoBehaviour {
-    
-    bool ziplamaKontrol;
-    public float jump1;
-    public float jump2;
-    public float jump3;
-    public float fall1;
-    public float fall2;
-    
-   
+public class jump : MonoBehaviour
+{
 
-    void Start () {
+    bool ziplamaKontrol;
+    private bool reachTop;
+
+    private float minus = 0.5f;
+
+    void Start()
+    {
 
         ziplamaKontrol = false;
-	}
+    }
 
 
     void Update()
@@ -24,101 +22,40 @@ public class jump : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space) && ziplamaKontrol)
         {
-            transform.Translate(Vector3.up * jump1 * Time.deltaTime);
 
-
-
-
-            if (transform.position.y == 4)
-            {
-
-                transform.Translate(Vector3.up * jump2 * Time.deltaTime);
-                ziplamaKontrol = false;
-
-            }
-
-
-
-
-            if (transform.position.y == 6)
-            {
-
-                transform.Translate(Vector3.up * jump3 * Time.deltaTime);
-
-                ziplamaKontrol = false;
-            }
-
-
-            if (transform.position.y == 6)
-            {
-
-                transform.Translate(Vector3.down * fall1 * Time.deltaTime);
-
-                ziplamaKontrol = false;
-            }
-
-
-            if (transform.position.y == 3)
-            {
-
-                transform.Translate(Vector3.down * fall2 * Time.deltaTime);
-
-                ziplamaKontrol = false;
-            }
-
-
-
-
-
-
+            minus = 0.3f;
 
             ziplamaKontrol = false;
+            reachTop = false;
+        }
 
+        if (!ziplamaKontrol)
+        {
 
+            if (transform.position.y > 7)
+            {
+                reachTop = true;
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            if (!reachTop)
+            {
+                transform.position += Vector3.up * minus;
+                minus += 0.001f;
+            }
+            else
+            {
+                transform.position -= Vector3.up * minus;
+                minus -= 0.001f;
+            }
 
         }
 
-
-
     }
 
-
-        
-    
-
-
-     void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-
 
         ziplamaKontrol = true;
     }
 
 }
-
