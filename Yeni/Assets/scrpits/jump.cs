@@ -23,7 +23,7 @@ public class jump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && ziplamaKontrol)
         {
 
-            minus = 0.3f;
+            minus = 0.5f;
 
             ziplamaKontrol = false;
             reachTop = false;
@@ -49,6 +49,10 @@ public class jump : MonoBehaviour
             }
 
         }
+
+        transform.Rotate(20, 0, 0);
+
+
 
     }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - sensor
   - sensor2
+  - puan
   layers:
   - Default
   - TransparentFX
