@@ -7,6 +7,7 @@ TagManager:
   - sensor
   - sensor2
   - puan
+  - enemy
   layers:
   - Default
   - TransparentFX

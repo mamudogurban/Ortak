@@ -7,12 +7,12 @@ public class jump : MonoBehaviour
 
     bool ziplamaKontrol;
     private bool reachTop;
-
+    
     private float minus = 0.5f;
-
+  
     void Start()
     {
-
+     
         ziplamaKontrol = false;
     }
 
@@ -32,7 +32,7 @@ public class jump : MonoBehaviour
         if (!ziplamaKontrol)
         {
 
-            if (transform.position.y > 7)
+            if (transform.position.y > 15)
             {
                 reachTop = true;
             }
@@ -40,17 +40,16 @@ public class jump : MonoBehaviour
             if (!reachTop)
             {
                 transform.position += Vector3.up * minus;
-                minus += 0.001f;
+                minus += 0.005f;
             }
             else
             {
                 transform.position -= Vector3.up * minus;
-                minus -= 0.001f;
+                minus -= 0.003f;
             }
 
         }
 
-        transform.Rotate(20, 0, 0);
 
 
 
