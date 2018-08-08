@@ -2,20 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour{
+
     private bool _pointGiven;
 
-    public bool pointGiven
-    {
+    public bool PointGiven{
 
         get { return _pointGiven; }
 
-        set
-        {
-            pointGiven = value;
-
-           
+        set {
+            _pointGiven = value;
         }
 
     }
