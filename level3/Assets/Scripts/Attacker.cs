@@ -5,17 +5,22 @@ using UnityEngine;
 public class Attacker : MonoBehaviour {
   
     private float currentSpeed;
-    private GameObject currentTarger;
+    private GameObject currentTarget;
+    private Animator animator;
 
 	
 	void Start () {
-        Rigidbody2D myRigidbody = gameObject.AddComponent<Rigidbody2D>();
-        myRigidbody.isKinematic = true;
+       
+        animator = GetComponent<Animator>();
 	}
 	
 	
 	void Update () {
         transform.Translate(Vector3.left * currentSpeed * Time.deltaTime);
+        if (!currentTarget)
+        {
+            animator.SetBool("isAttacking", false);
+        }
 	}
 
 
@@ -31,11 +36,21 @@ public class Attacker : MonoBehaviour {
     }
     public void  StrikeCurrentTarget(float damage)
     {
-        Debug.Log(name + "caused damage" + damage);
+
+        if (currentTarget)
+        {
+            Debug.Log(name + "caused damage" + damage);
+            Health health = currentTarget.GetComponent<Health>();
+
+            if (health)
+            {
+                health.DealDamage(damage);
+            }
+        }
     }
     public void Attack(GameObject obj)
     {
-        currentTarger = obj;
+        currentTarget= obj;
     }
 }
 
